@@ -1,4 +1,5 @@
 <?php
+
 class ItalianLicensePlateSidecodeTest extends \PHPUnit\Framework\TestCase
 {
     /**

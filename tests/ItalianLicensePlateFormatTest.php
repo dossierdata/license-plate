@@ -1,4 +1,5 @@
 <?php
+
 class ItalianLicensePlateFormatTest extends \PHPUnit\Framework\TestCase
 {
     /**

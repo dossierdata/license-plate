@@ -1,4 +1,5 @@
 <?php
+
 use Intrepidity\LicensePlate\UKLicensePlate;
 
 class UKLicensePlateSidecodeTest extends \PHPUnit\Framework\TestCase
@@ -64,11 +65,11 @@ class UKLicensePlateSidecodeTest extends \PHPUnit\Framework\TestCase
     public function testSidecode4()
     {
         $licenseplate = new UKLicensePlate('a21aaa');
-        $this->assertEquals($licenseplate->getSidecode(),4);
+        $this->assertEquals($licenseplate->getSidecode(), 4);
         $this->assertTrue($licenseplate->isValid());
 
         $licenseplate = new UKLicensePlate('y999yyy');
-        $this->assertEquals($licenseplate->getSidecode(),4);
+        $this->assertEquals($licenseplate->getSidecode(), 4);
         $this->assertTrue($licenseplate->isValid());
     }
 

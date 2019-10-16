@@ -1,4 +1,5 @@
 <?php
+
 namespace Intrepidity\LicensePlate;
 
 /**
@@ -24,12 +25,12 @@ class FrenchLicensePlate extends AbstractLicensePlate implements LicensePlateInt
         $sidecodes = array();
 
         // Special sidecodes
-        $sidecodes['CIV'] =  '/^[\d]{2,3}[DRNEdrne]{1}[\d]{4}[a-zA-Z]{1}$/';  // Civilian government cars 1976-2009: 99D-9999X
+        $sidecodes['CIV'] = '/^[\d]{2,3}[DRNEdrne]{1}[\d]{4}[a-zA-Z]{1}$/';  // Civilian government cars 1976-2009: 99D-9999X
         $sidecodes['MIL'] = '/^[\d]{8}$/';                                     // Military: 99999999
 
         // Normal sidecodes
-        $sidecodes[1] =     '/^[\d]{2,4}[a-zA-Z]{2,3}[\d]{2,3}$/';    // 1 9999-XX-99; 1976-2009
-        $sidecodes[2] =     '/^[a-zA-Z]{2}[\d]{3}[a-zA-Z]{2}$/';    // 2 XX-999-XX; 2009-now
+        $sidecodes[1] = '/^[\d]{2,4}[a-zA-Z]{2,3}[\d]{2,3}$/';    // 1 9999-XX-99; 1976-2009
+        $sidecodes[2] = '/^[a-zA-Z]{2}[\d]{3}[a-zA-Z]{2}$/';    // 2 XX-999-XX; 2009-now
 
         return $this->checkPatterns($sidecodes, $licenseplate);
     }
@@ -44,20 +45,17 @@ class FrenchLicensePlate extends AbstractLicensePlate implements LicensePlateInt
      */
     public function format($sidecode = 0)
     {
-        if($sidecode === 0)
-        {
+        if ($sidecode === 0) {
             $sidecode = $this->getSidecode();
         }
 
-        if(false === $sidecode)
-        {
+        if (false === $sidecode) {
             return false;
         }
 
         $licenseplate = strtoupper(str_replace('-', '', $this->licenseplate));
 
-        switch($sidecode)
-        {
+        switch ($sidecode) {
             case 'MIL':
                 return $this->licenseplate;
                 break;
@@ -72,7 +70,8 @@ class FrenchLicensePlate extends AbstractLicensePlate implements LicensePlateInt
                 return $parts[1] . '-' . $parts[2] . '-' . $parts[3];
 
             case 2:
-                return substr($licenseplate, 0, 2) . '-' . substr($licenseplate, 2, 3) . '-' . substr($licenseplate, 5, 2);
+                return substr($licenseplate, 0, 2) . '-' . substr($licenseplate, 2, 3) . '-' . substr($licenseplate, 5,
+                        2);
         }
 
         return $licenseplate;

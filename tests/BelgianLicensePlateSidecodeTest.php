@@ -1,5 +1,6 @@
 <?php
 require_once("src/Intrepidity/LicensePlate/DutchLicensePlate.php");
+
 use Intrepidity\LicensePlate\BelgianLicensePlate;
 
 class BelgianLicensePlateSidecodeTest extends \PHPUnit\Framework\TestCase

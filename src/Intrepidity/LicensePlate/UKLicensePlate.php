@@ -1,4 +1,5 @@
 <?php
+
 namespace Intrepidity\LicensePlate;
 
 /**
@@ -45,20 +46,17 @@ class UKLicensePlate extends AbstractLicensePlate implements LicensePlateInterfa
      */
     public function format($sidecode = 0)
     {
-        if($sidecode === 0)
-        {
+        if ($sidecode === 0) {
             $sidecode = $this->getSidecode();
         }
 
-        if(false === $sidecode)
-        {
+        if (false === $sidecode) {
             return false;
         }
 
         $licenseplate = strtoupper(str_replace(array(' ', '-'), '', $this->licenseplate));
 
-        switch($sidecode)
-        {
+        switch ($sidecode) {
             case 1:
                 preg_match('/^([a-zA-Z]{1,2})([\d]{1,4})$/', $licenseplate, $parts);
                 return $parts[1] . ' ' . $parts[2];

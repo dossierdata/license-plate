@@ -1,4 +1,5 @@
 <?php
+
 namespace Intrepidity\LicensePlate;
 
 /**
@@ -28,10 +29,8 @@ abstract class AbstractLicensePlate
      */
     protected function checkPatterns(array $patterns, $licenseplate)
     {
-        foreach($patterns as $key => $pattern)
-        {
-            if(preg_match($pattern, $licenseplate))
-            {
+        foreach ($patterns as $key => $pattern) {
+            if (preg_match($pattern, $licenseplate)) {
                 return $key;
             }
         }

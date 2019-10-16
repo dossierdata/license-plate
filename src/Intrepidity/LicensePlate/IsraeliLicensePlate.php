@@ -1,4 +1,5 @@
 <?php
+
 namespace Intrepidity\LicensePlate;
 
 class IsraeliLicensePlate extends AbstractLicensePlate implements LicensePlateInterface
@@ -38,15 +39,14 @@ class IsraeliLicensePlate extends AbstractLicensePlate implements LicensePlateIn
     {
         $licenseplate = strtoupper(str_replace(array('-', '.'), '', $this->licenseplate));
 
-        if(false === $this->isValid())
-        {
+        if (false === $this->isValid()) {
             return false;
         }
 
-        switch($this->getSidecode())
-        {
+        switch ($this->getSidecode()) {
             case 1:
-                return substr($licenseplate, 0, 2) . '-' . substr($licenseplate, 2, 3) . '-' . substr($licenseplate, 5, 2);
+                return substr($licenseplate, 0, 2) . '-' . substr($licenseplate, 2, 3) . '-' . substr($licenseplate, 5,
+                        2);
                 break;
 
             case 'M':
@@ -58,7 +58,7 @@ class IsraeliLicensePlate extends AbstractLicensePlate implements LicensePlateIn
                 break;
 
             case 'MTZ':
-                return 'מצ-'.mb_substr($licenseplate, 2);
+                return 'מצ-' . mb_substr($licenseplate, 2);
                 break;
 
             default:

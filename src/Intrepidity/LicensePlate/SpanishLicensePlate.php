@@ -1,35 +1,109 @@
 <?php
+
 namespace Intrepidity\LicensePlate;
 
 class SpanishLicensePlate extends AbstractLicensePlate implements LicensePlateInterface
 {
     protected $regionCodes = [
-        'A', 'AB', 'AL', 'ALB', 'AOE', 'AV',
-        'B', 'BA', 'BI', 'BU',
-        'C', 'CA', 'CAC', 'CAS', 'CC', 'CE', 'CO', 'CR', 'CS', 'CU',
+        'A',
+        'AB',
+        'AL',
+        'ALB',
+        'AOE',
+        'AV',
+        'B',
+        'BA',
+        'BI',
+        'BU',
+        'C',
+        'CA',
+        'CAC',
+        'CAS',
+        'CC',
+        'CE',
+        'CO',
+        'CR',
+        'CS',
+        'CU',
         'FP',
-        'GC', 'GE', 'GI', 'GR', 'GU',
-        'H', 'HU',
-        'I', 'IB', 'IF',
+        'GC',
+        'GE',
+        'GI',
+        'GR',
+        'GU',
+        'H',
+        'HU',
+        'I',
+        'IB',
+        'IF',
         'J',
-        'L', 'LE', 'LO', 'LR', 'LU',
-        'M', 'MA', 'ME', 'ML', 'MU',
+        'L',
+        'LE',
+        'LO',
+        'LR',
+        'LU',
+        'M',
+        'MA',
+        'ME',
+        'ML',
+        'MU',
         'NA',
-        'O', 'OR', 'OU',
-        'P', 'PA', 'PM', 'PO',
+        'O',
+        'OR',
+        'OU',
+        'P',
+        'PA',
+        'PM',
+        'PO',
         'RM',
-        'S', 'SA', 'SE', 'SEG', 'SG', 'SH', 'SO', 'SS',
-        'T', 'TE', 'TEG', 'TER', 'TF', 'TG', 'TO',
-        'V', 'VA', 'VI',
-        'Z', 'ZA',
+        'S',
+        'SA',
+        'SE',
+        'SEG',
+        'SG',
+        'SH',
+        'SO',
+        'SS',
+        'T',
+        'TE',
+        'TEG',
+        'TER',
+        'TF',
+        'TG',
+        'TO',
+        'V',
+        'VA',
+        'VI',
+        'Z',
+        'ZA',
     ];
 
     protected $specialCodes = [
-        'CME', 'DGP', 'CNP', 'E', 'EA', 'ET', 'FN', 'GSH', 'PGC', 'MF', 'MMA', 'MOP', 'PME', 'PMM'
+        'CME',
+        'DGP',
+        'CNP',
+        'E',
+        'EA',
+        'ET',
+        'FN',
+        'GSH',
+        'PGC',
+        'MF',
+        'MMA',
+        'MOP',
+        'PME',
+        'PMM'
     ];
 
     protected $colorCodes = [
-        'C', 'E', 'H', 'P', 'R', 'S', 'T', 'V'
+        'C',
+        'E',
+        'H',
+        'P',
+        'R',
+        'S',
+        'T',
+        'V'
     ];
 
     protected $sideCodes = [];
@@ -66,7 +140,7 @@ class SpanishLicensePlate extends AbstractLicensePlate implements LicensePlateIn
                 break;
 
             case 2:
-                return $parts[1] . '-' . $parts[2] . '-'. $parts[3];
+                return $parts[1] . '-' . $parts[2] . '-' . $parts[3];
                 break;
 
             case 3:

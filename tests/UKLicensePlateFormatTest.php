@@ -1,4 +1,5 @@
 <?php
+
 use Intrepidity\LicensePlate\UKLicensePlate;
 
 class UKLicensePlateFormatTest extends \PHPUnit\Framework\TestCase

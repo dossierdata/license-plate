@@ -1,4 +1,5 @@
 <?php
+
 namespace Intrepidity\LicensePlate;
 
 /**
@@ -39,20 +40,17 @@ class LuxembourgianLicensePlate extends AbstractLicensePlate implements LicenseP
      */
     public function format($sidecode = 0)
     {
-        if($sidecode === 0)
-        {
+        if ($sidecode === 0) {
             $sidecode = $this->getSidecode();
         }
 
-        if(false === $sidecode)
-        {
+        if (false === $sidecode) {
             return false;
         }
 
         $licenseplate = strtoupper(str_replace(array(' ', '-'), '', $this->licenseplate));
 
-        switch($sidecode)
-        {
+        switch ($sidecode) {
             case 1:
                 return substr($licenseplate, 0, 1) . ' ' . substr($licenseplate, 1);
                 break;

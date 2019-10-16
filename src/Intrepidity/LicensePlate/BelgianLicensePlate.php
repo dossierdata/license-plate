@@ -1,4 +1,5 @@
 <?php
+
 namespace Intrepidity\LicensePlate;
 
 class BelgianLicensePlate extends AbstractLicensePlate implements LicensePlateInterface
@@ -44,22 +45,20 @@ class BelgianLicensePlate extends AbstractLicensePlate implements LicensePlateIn
      */
     public function format($sidecode = 0)
     {
-        if($sidecode === 0)
-        {
+        if ($sidecode === 0) {
             $sidecode = $this->getSidecode();
         }
 
-        if(false === $sidecode)
-        {
+        if (false === $sidecode) {
             return false;
         }
 
         $licenseplate = strtoupper(str_replace(array('-', '.'), '', $this->licenseplate));
 
-        switch($sidecode)
-        {
+        switch ($sidecode) {
             case 1:
-                return substr($licenseplate, 0, 1) . "." . substr($licenseplate, 1, 3) . "." . substr($licenseplate, 4, 1);
+                return substr($licenseplate, 0, 1) . "." . substr($licenseplate, 1, 3) . "." . substr($licenseplate, 4,
+                        1);
 
             case 2:
             case 3:
@@ -67,7 +66,8 @@ class BelgianLicensePlate extends AbstractLicensePlate implements LicensePlateIn
 
             case 4:
             case 5:
-                return substr($licenseplate, 0, 1) . "-" . substr($licenseplate, 1, 3) . "-" . substr($licenseplate, 4, 3);
+                return substr($licenseplate, 0, 1) . "-" . substr($licenseplate, 1, 3) . "-" . substr($licenseplate, 4,
+                        3);
         }
     }
 

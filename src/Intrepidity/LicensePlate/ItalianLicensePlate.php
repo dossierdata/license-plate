@@ -1,4 +1,5 @@
 <?php
+
 namespace Intrepidity\LicensePlate;
 
 class ItalianLicensePlate extends AbstractLicensePlate implements LicensePlateInterface
