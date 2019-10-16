@@ -1,7 +1,7 @@
 License plate validator and formatter
 =====================================
 
-[![Build Status](https://secure.travis-ci.org/Intrepidity/LicensePlate.svg)](http://travis-ci.org/Intrepidity/LicensePlate)
+[![Build Status](https://travis-ci.org/dossierdata/license-plate.svg?branch=master)](https://travis-ci.org/dossierdata/license-plate)
 
 This library can be used to validate and format license plate numbers.
 Countries currently supported:
