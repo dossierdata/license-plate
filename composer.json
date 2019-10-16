@@ -1,0 +1,36 @@
+{
+  "name": "dossierdata/license-plate",
+  "description": "PHP library to validate and format license plate numbers.",
+  "keywords": [
+    "PHP",
+    "License plate"
+  ],
+  "homepage": "http://github.com/dossierdata/licence-plate.git",
+  "type": "library",
+  "license": "LGPL",
+  "authors": [
+    {
+      "name": "Bart Guliker",
+      "email": "bart1987@gmail.com"
+    },
+    {
+      "name": "Peter Mein",
+      "email": "peter@infratron.io"
+    },
+    {
+      "name": "Lucas van der Have",
+      "email": "lucas@dossierdata.nl"
+    }
+  ],
+  "require": {
+    "php": ">=7.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~7.0"
+  },
+  "autoload": {
+    "psr-0": {
+      "": "src/"
+    }
+  }
+}
